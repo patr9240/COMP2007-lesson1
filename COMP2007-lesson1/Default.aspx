@@ -47,15 +47,16 @@
                 <form id="form1" runat="server">
                     <div class="form-group">
                         <asp:Label ID="FirstNameLabel" runat="server" Text="First Name"></asp:Label>
-                        <asp:TextBox CssClass="form-control" ID="FirstNameTextBox" runat="server" required="true"></asp:TextBox>
+                        <asp:TextBox CssClass="form-control" ID="FirstNameTextBox" runat="server" required="true" CausesValidation="True"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <asp:Label ID="LastNameLabel" runat="server" Text="Last Name"></asp:Label>
-                        <asp:TextBox CssClass="form-control" ID="LastNameTextBox" runat="server" required="true"></asp:TextBox>
+                        <asp:TextBox CssClass="form-control" ID="LastNameTextBox" runat="server" required="true" CausesValidation="True"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <asp:Label ID="AgeLabel" runat="server" Text="Age"></asp:Label>
-                        <asp:TextBox CssClass="form-control" ID="AgeTextBox" runat="server" required="true"></asp:TextBox>
+                        <asp:TextBox CssClass="form-control" ID="AgeTextBox" runat="server" required="true" CausesValidation="True"></asp:TextBox>
+                        <asp:RangeValidator runat="server" ErrorMessage="Please enter an age between 1 and 100." ControlToValidate="AgeTextBox" MaximumValue="100" MinimumValue="1" ForeColor="Red" Type="Integer"></asp:RangeValidator>
                     </div>
                     <asp:Button CssClass="btn btn-primary" ID="SubmitButton" runat="server" Text="Submit" OnClick="SubmitButton_Click1" />
                     <br />
