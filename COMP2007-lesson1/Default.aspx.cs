@@ -14,6 +14,7 @@ namespace COMP2007_lesson1
         }
         protected void SubmitButton_Click1(object sender, EventArgs e)
         {
+
             FullNameTextBox.Text = FirstNameTextBox.Text.ToString() + " " + LastNameTextBox.Text.ToString();
         }
     }
